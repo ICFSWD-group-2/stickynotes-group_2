@@ -2,7 +2,7 @@ import React from 'react';
 
 function Filter({ filter, setFilter }) {
   return (
-    <div>
+    <div className='Filter'>
       <label>Filter by: </label>
       <select value={filter} onChange={(e) => setFilter(e.target.value)}>
         <option value="all">All</option>

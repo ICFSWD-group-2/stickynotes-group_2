@@ -11,14 +11,14 @@ function NoteForm({ addNote }) {
   };
 
   return (
-    <div>
+    <div className='NoteForm'>
       <input
         type="text"
         placeholder="Add a new note"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button onClick={handleSubmit}>Create Note</button>
+      <button className='btncr' onClick={handleSubmit}>Create Note</button>
     </div>
   );
 }

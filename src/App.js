@@ -30,7 +30,7 @@ function App() {
     setNotes(updatedNotes);
   };
 
-  const filteredNotes = notes.filter((note) => {
+  const filterNotes = notes.filter((note) => {
     if (filter === 'all') {
       return note.title.includes(search);
     } else if (filter === 'completed') {
@@ -42,21 +42,29 @@ function App() {
 
   return (
     <div>
-      <h1>Note-Taking App</h1>
-      <NoteForm addNote={addNote} />
+      <h1>Sticky-Notes</h1>
+
+      <div className='box'>
       <Filter filter={filter} setFilter={setFilter} />
-      <input
+      <input 
         type="text"
         placeholder="Search notes..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
+      </div>
+
+      <div className='addnote'>
+      <NoteForm addNote={addNote} />
+      </div>
+      <div className='notelist'>
       <NoteList
-        notes={filteredNotes}
+        notes={filterNotes}
         editNote={editNote}
         toggleNotes={toggleNotes}
         deleteNote={deleteNote}
       />
+      </div>
     </div>
   );
 }

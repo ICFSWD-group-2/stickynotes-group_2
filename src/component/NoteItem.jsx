@@ -5,7 +5,7 @@ function NoteItem({ note, onEdit, onToggle, onDelete }) {
   const [title, setTitle] = useState(note.title);
 
   return (
-    <li>
+    <li >
       {isEditing ? (
         <input
           type="text"
@@ -23,15 +23,17 @@ function NoteItem({ note, onEdit, onToggle, onDelete }) {
           }}
         />
       ) : (
-        <div>
+        <div className='NoteItem'>
           <input
+            className='check'
             type="checkbox"
             checked={note.completed}
             onChange={onToggle}
           />
-          <span onClick={() => setIsEditing(true)}>{note.title}</span>
-          <button onClick={onDelete}>Delete</button>
+          <span className='view' onClick={() => setIsEditing(true)}>{note.title}</span>
+          <button className='btndt' onClick={onDelete}>Delete</button>
         </div>
+        
       )}
     </li>
   );

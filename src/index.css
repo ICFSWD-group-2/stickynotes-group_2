@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Manrope:wght@200&family=Poppins:wght@500;700&family=Varela+Round&family=Young+Serif&display=swap');
+*{
+  font-family: Agbalumo,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  text-align: center;
+  font-size: 30px;
+}
+body {
+  margin: 0;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+input{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  overflow: auto;
+}
+select{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+button{
+  margin-left: 30px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  height: 60px;
+}
+.btndt{
+  background-color: red;
+  color: black;
+  font-weight: bolder;
+  transition: .5s;
+}
+.btndt:hover{
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+}
+.btncr{
+  background-color: blue;
+  color: black;
+  font-weight: bolder;
+  transition: .3s;
+}
+.btncr:hover{
+  background-color: antiquewhite;
+}
+ul{
+  list-style-type: none;
+  margin-top: 5px;
+}
+li{
+  margin-top: 10px;
+  font-size: 20px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 10px;
+  width:1000px;
+  background-color: white;
+}
+/* app.js */
+.addnote,.notelist{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px ;
+}
+
+/* noteitem.jsx */
+.view{
+  overflow: auto;
+  width: 500px;
+  height: 200px;
+  font-size: 40px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NoteItem{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.check{
+  height: 30px;
+  width: 30px;
+  color: red;
 }
